@@ -60,7 +60,7 @@
     div {
       width: 60px;
       height: 60px;
-      background: #14FFCB;
+      background: #1FEBDF;
       border: 1px solid black;
       border-radius: 5px;
     }
@@ -79,10 +79,10 @@
     .popup {
       display: none;
       position: absolute;
-      left: 30%;
+      left: 35%;
       background: #28C3F7;
       border: 2px solid #1C87AB;
-      width: 40%;
+      width: 30%;
       height: 150px;
       z-index: 1000;
       top: 90px;
@@ -180,17 +180,6 @@
   function random() {
     return (Math.random() * 25);
   }
-
-
-  var openx = Math.floor(random());
-  var xxx = openx;
-
-  function xxopen() {
-    if (xxx == openx) {
-      openx = Math.floor(random());
-      xxx = openx;
-    }
-  }
   var x = Math.floor(random());
 while (true) {
     var y = Math.floor(random());
@@ -200,7 +189,7 @@ while (true) {
 var z = Math.floor(random());
     if (z != y && z != x) break;
 }
-  let table = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24];
+  var table = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24];
   table[x] = 25;
   table[y] = 25;
   table[z] = 25;
@@ -211,9 +200,14 @@ var z = Math.floor(random());
     y = Math.floor(random());
   }
   let n = 0;
-
+  var openx = Math.floor(random());
+function auto(){
+  while(table[openx] == 26) {
+     openx = Math.floor(random());
+  }
+}
+setInterval(auto, 1);
   function check(n) {
-    xxopen();
     var bal = document.getElementById('balance');
     if (table[n] == 25) {
       $('.' + x + '').css("background", "#B563FF")
@@ -291,7 +285,7 @@ var z = Math.floor(random());
   </center>
   <br>
   <br>
-  <span class="righttxt">version 1.6 </span>
+  <span class="righttxt">version 1.7</span>
 </body>
 
 </html>
