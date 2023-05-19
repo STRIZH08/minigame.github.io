@@ -2,17 +2,10 @@
 
 <head>
   <meta charset="utf-8">
-  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
   <style>
    body{
-     background: 101010;
+     background: #101010;
    }
-    ion-icon{
-      font-size: 48px;
-      color: green;
-      font-weight: 300;
-    }
     .fulltxt {
       color: #000;
       background: linear-gradient(45deg, red, yellow);
@@ -26,6 +19,7 @@
       align-items: right;
       justify-content: right;
       right: 0;
+      color: white;
     }
     
     input {
@@ -66,7 +60,7 @@
     div {
       width: 60px;
       height: 60px;
-      background: #bbc78d;
+      background: #14FFCB;
       border: 1px solid black;
       border-radius: 5px;
     }
@@ -86,8 +80,8 @@
       display: none;
       position: absolute;
       left: 30%;
-      background: #60b4e5;
-      border: 2px solid #1c84e9;
+      background: #28C3F7;
+      border: 2px solid #1C87AB;
       width: 40%;
       height: 150px;
       z-index: 1000;
@@ -136,8 +130,8 @@
     }
     
     .lose.popup {
-      background: #ea7979;
-      border: 2px solid #f33333;
+      background: #B563FF;
+      border: 2px solid #8448BA;
       animation: sliv .3s;
     }
     
@@ -222,17 +216,16 @@ var z = Math.floor(random());
     xxopen();
     var bal = document.getElementById('balance');
     if (table[n] == 25) {
-      $('.' + x + '').css("background", "red")
-      $('.' + y + '').css("background", "red")
-      $('.' + z + '').css("background", "red")
+      $('.' + x + '').css("background", "#B563FF")
+      $('.' + y + '').css("background", "#B563FF")
+      $('.' + z + '').css("background", "#B563FF")
       $('.lose').css('display', 'flex')
       $('.lose').css('display', 'flex')
       table = 25;
     }
     if (table[n] < 25) {
       table[n] = 26;
-      $('.' + n + '').css("background", "#5f5")
-      $('.' + n + '').html("<ion-icon name='checkmark-outline'></ion-icon>")
+      $('.' + n + '').css("background", "#28C3F7")
       i++;
       $('.popup').html('<p>' + balance[i] + 'x</p>      <input class="resetbtn" type="button" value="Играть сначала" onclick="window.location.reload()">')
       bal.value = (balance[i] + 'x');
@@ -297,8 +290,6 @@ var z = Math.floor(random());
   <input onclick="check(openx)" style="font-weight: bold" type="button" value="Авто">
   </center>
   <br>
-  <br>
-  <center><a href="https://vk.com/sasstrizh">Разраб</a></center>
   <br>
   <span class="righttxt">version 1.6 </span>
 </body>
