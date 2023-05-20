@@ -30,6 +30,7 @@
       background: linear-gradient(45deg, #28C3F7, #B563FF);
       padding: .5em 1em;
       border-radius: .5em;
+      color: white;
     }
     
     a {
@@ -120,7 +121,7 @@
       top: 90px;
       font-weight: 600;
       height: 25px;
-      background: whitesmoke;
+      background: #000;
     }
     
     .resetbtn:active {
@@ -225,8 +226,8 @@ setInterval(auto, 1);
       table[n] = 26;
       $('.' + n + '').css("background", "#28C3F7")
       i++;
-      $('.popup').html('<p>' + balance[i] + 'x</p>      <input class="resetbtn" type="button" value="Играть сначала" onclick="window.location.reload()">')
-      bal.value = (balance[i] + 'x');
+      $('.popup').html('<p>Счет:' + balance[i] + '</p>      <input class="resetbtn" type="button" value="Играть сначала" onclick="window.location.reload()">')
+      bal.value = ('Счет:' + balance[i]);
       if (i == 22) {
         $('.win').css('display', 'flex')
         $('.win').css('display', 'flex')
@@ -238,7 +239,7 @@ setInterval(auto, 1);
 
 <body>
   <center>
-    <input type="submit" value="1" id='balance'>
+    <input type="submit" value="Счет: 0" id='balance'>
   </center>
   <br>
   <center>
@@ -277,7 +278,7 @@ setInterval(auto, 1);
   </div>
   <div class="lose bgpopup bgwindow"></div>
   <div class="win popup window">
-    <input type="submit" value="1" id='balanc'> Выйгрыш
+    <input type="submit" value="1" id='balanc'> Счет
     <br/>
     <input class="resetbtn" type="button" value="Играть сначала" onclick="window.top.location.reload()">
   </div>
