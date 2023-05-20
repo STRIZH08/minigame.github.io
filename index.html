@@ -9,6 +9,8 @@
   <style>
    body{
      background: #101010;
+      height: 1400px;
+     width: 1000px;
    }
     .fulltxt {
       color: #000;
@@ -27,10 +29,13 @@
     }
     
     input {
+      width: 400px;
+      height: 150px;
       background: linear-gradient(45deg, #28C3F7, #B563FF);
       padding: .5em 1em;
       border-radius: .5em;
       color: white;
+      font-size: 3em;
     }
     
     a {
@@ -63,8 +68,8 @@
     }
     
     div {
-      width: 60px;
-      height: 60px;
+      width: 150px;
+      height: 150px;
       background: #1FEBDF;
       border: 1px solid black;
       border-radius: 5px;
@@ -83,18 +88,19 @@
     
     .popup {
       display: none;
+      line-height: 2em;
       position: absolute;
       left: 35%;
       background: #28C3F7;
       border: 2px solid #1C87AB;
       width: 30%;
-      height: 150px;
+      height: 300px;
       z-index: 1000;
-      top: 90px;
+      top: 390px;
       border-radius: 1.5em;
       align-items: center;
       justify-content: center;
-      font-size: 1.5em;
+      font-size: 3em;
       font-weight: 600;
     }
     
@@ -114,14 +120,18 @@
     
     .resetbtn {
       display: flex;
+      height: 200px;
+      text-align: center;
       flex-wrap: wrap;
       border-radius: .3em;
       position: absolute;
       margin: 0 auto;
-      top: 90px;
+      top: 200px;
+      width: 200px;
       font-weight: 600;
       height: 25px;
       background: #000;
+      font-size: .3em;
     }
     
     .resetbtn:active {
