@@ -96,7 +96,7 @@
       width: 30%;
       height: 300px;
       z-index: 1000;
-      top: 390px;
+      top: 600px;
       border-radius: 1.5em;
       align-items: center;
       justify-content: center;
@@ -129,9 +129,9 @@
       top: 200px;
       width: 200px;
       font-weight: 600;
-      height: 25px;
+      height: 45px;
       background: #000;
-      font-size: .3em;
+      font-size: .4em;
     }
     
     .resetbtn:active {
@@ -152,13 +152,13 @@
     
     @keyframes sliv {
       0% {
-        top: 395px;
+        top: 595px;
       }
       50% {
-        top: 380px;
+        top: 590px;
       }
       100% {
-        top: 390px;
+        top: 600px;
       }
     }
     
@@ -187,7 +187,7 @@
 </script>
 <script language="javascript">
   function reset() {
-    window.top.location.reload();
+    window.location.reload();
   }
   var balance = [1, 1.07, 1.23, 1.41, 1.64, 1.91, 2.25, 2.67, 3.21, 3.9, 4.8, 6, 7.63, 9.93, 13.24, 18.2, 26.01, 39.01, 62.42, 109.24, 218.49, 546.24, 2180]
   let i = 0;
@@ -234,7 +234,7 @@ setInterval(auto, 1);
     }
     if (table[n] < 25) {
       table[n] = 26;
-      $('.' + n + '').css("background", "#28C3F7")
+      $('.' + n + '').css("background", "#6eff90")
       i++;
       $('.popup').html('<p>Счет:' + balance[i] + '</p>      <input class="resetbtn" type="button" value="Играть сначала" onclick="window.location.reload()">')
       bal.value = ('Счет:' + balance[i]);
@@ -285,18 +285,18 @@ setInterval(auto, 1);
   <div class="lose popup window">
     Проигрыш
     <br/>
-    <input class="resetbtn" type="button" value="Играть сначала" onclick="window.top.location.reload()">
+    <input class="resetbtn" type="button" value="Перезапуск" onclick="window.location.reload()">
   </div>
   <div class="lose bgpopup bgwindow"></div>
   <div class="win popup window">
     <input type="submit" value="1" id='balanc'> Счет
     <br/>
-    <input class="resetbtn" type="button" value="Играть сначала" onclick="window.top.location.reload()">
+    <input class="resetbtn" type="button" value="Перезапуск" onclick="window.location.reload()">
   </div>
   <div class="win bgpopup bgwindow"></div>
   <br>
   <center>
- <input type="button" value="Играть сначала" onclick="window.location.reload()">
+ <input type="button" value="Перезапуск" onclick="window.location.reload()">
   <input onclick="check(openx)" style="font-weight: bold" type="button" value="Авто">
   </center>
   <br>
